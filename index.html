@@ -5,12 +5,28 @@
     <link rel="stylesheet" href="style.css">    
   </head>
   <body>
-    <div class="main">
-      <div>
+    
+    <div class="items">
+      <div class="container">
         <!-- ini buat card user akan memilih untuk menjadi pembantu atau butuh bantuan -->
-        <div></div>
-        <div></div>
+        <main class = "grid">
+          <article>
+            <img src="user4.png" width="200px" height="200px">
+            <div class = "konten">
+              <h2>USER</h2>
+            </div>
+          </article>
+          <article>
+            <img src="helper.png" width="200px" height="200px">
+            <div class="konten">
+              <h2>HELPER</h2>
+            </div>
+          </article>
+        </main>
       </div>
+    </div>
+
+    <div class="main">
       <div id="user-form">
         <!-- buat input data butuh bantuan nama dan daerah -->
         <h2>I Need Someone</h2>
@@ -31,7 +47,11 @@
   
         </div>
       </div>
+    </div>
+
+    <div class="formHelper">
       <div id="helper-form">
+
         <!-- buat input data pembantu nama, no telp, daerah -->
         <h2>Helper Form</h2>
         
@@ -48,13 +68,14 @@
         <input type="text" name="helperDescInput" id="helper-desc-input">
   
         <button id="submit-button" onclick="addData()">Submit</button>
+        
       </div>
       <div id="helper-container">
         <!-- list guardian -->
         <h2>List Helper</h2>
-  
+
         <div id="helper-card">
-  
+
         </div>
       </div>
     </div>

@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>I am Not Alone</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fjalla+One&family=Protest+Strike&display=swap" rel="stylesheet">  
+    <title>I am Not Alone</title> 
     <link rel="stylesheet" href="style.css">    
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="card.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- header -->
     <header>
-      <div class="right-section">
+      <div class="left-section">
+        <img class="hamburger-pic" src="picture/hamburger-menu.png"> 
         <p>I Am Not Alone</p>
       </div>
       <div class="middle-section">
 
       </div>
-      <div class="left-section">
-        <img src="babi.png" width="60px" height="50px">
+      <div class="right-section">
+        <a href="#about-us">@About Us</a>
+        <img class="header-pic" src="picture/icon.png">
       </div>
     </header>
-    <div class="items">
-      <div class="container">
+
+
+    <!-- user -->
+    <div class="container">
+      <div>
         <!-- ini buat card user akan memilih untuk menjadi pembantu atau butuh bantuan -->
         <main class = "grid">
-          <article>
-            <img src="user4.png" width="300px" height="300px">
+          <article id="to-user">
+            <img src="picture/user.png" width="300px" height="300px">
             <div class = "konten">
-              <h2>USER</h2>
+              <a class="a" href="#user-form">USER</a>
             </div>
           </article>
-          <article>
-            <img src="helper.png" width="300px" height="300px">
+          <article id="to-helper">
+            <img src="picture/helper.png" width="300px" height="300px">
             <div class="konten">
-              <h2>HELPER</h2>
+              <a class="a" href="#helper-form">HELPER</a>
             </div>
           </article>
         </main>
       </div>
     </div>
+
+
     <div class="words">
       <p>Asking for help when you’re down or when you’re depressed is actually the most powerful thing you can do.</p>
     </div>
-    <div class="main">
-      <div id="user-form">
+
+
+    <!-- user input -->
+    <div class="container" id="user-form">
+      <div>
         <!-- buat input data butuh bantuan nama dan daerah -->
         <h2>I Need Someone</h2>
   
-        <label for="user-name-input" class="user-form-input">Name</label>
+        <label for="user-name-input" class="user-form-input">What's your name:</label>
         <input type="text" name="userNameInput" id="user-name-input">
   
-        <label for="user-area-input" class="user-form-input">Area</label>
+        <label for="user-area-input" class="user-form-input">Where are you:</label>
         <input type="text" name="userAreaInput" id="user-area-input">
   
-        <button id="enter-button" onclick="nearYou()">Enter</button>
+        <button class="button-form" id="enter-button" onclick="nearYou()">Enter</button>
       </div>
       <div id="helper-list">
         <!-- menampilkan pembantu di daerah yang sama -->
@@ -68,33 +76,37 @@
         </div>
       </div>
     </div>
+
+
     <div class="words">
       <p>And that there are bright places even in dark times. And that if there isn't, you can be that bright place</p>
     </div>
-    <div class="formHelper">
-      <div id="helper-form">
 
+
+    <!-- Helper Form -->
+    <div class="container" id="helper-form">
+      <div>
         <!-- buat input data pembantu nama, no telp, daerah -->
         <h2>Helper Form</h2>
-        <label for="helper-name-input" class="helper-form-label">Nama</label>
+        <label for="helper-name-input" class="helper-form-label">Name:</label>
         <input type="text" name="helperNameInput" id="helper-name-input">
         <span id="helper-name-error" style="color: red; display: none;">Nama tidak boleh kosong</span>
 
-        <label for="helper-telp-input" class="helper-form-label">Telp</label>
+        <label for="helper-telp-input" class="helper-form-label">Telp:</label>
         <input type="text" name="helperTelpInput" id="helper-telp-input">
         <span id="helper-telp-error" style="color: red; display: none;">Nomor telepon salah</span>
 
-        <label for="helper-area-input" class="helper-form-label">Area</label>
+        <label for="helper-area-input" class="helper-form-label">Your domicile:</label>
         <input type="text" name="helperAreaInput" id="helper-area-input">
         <span id="helper-area-error" style="color: red; display: none;">Area tidak terjangkau</span>
         
-        <label for="helper-img-input" class="helper-form-label">Img</label>
-        <input type="image" name="helperImgInput" id="helper-img-input">
-        
-        <label for="helper-desc-input" class="helper-form-label">Description</label>
+        <label for="helper-img-input" class="helper-form-label">Profile pic:</label>
+        <input type="text" name="helperImgInput" id="helper-img-input">
+
+        <label for="helper-desc-input" class="helper-form-label">What's on your thoughts:</label>
         <input type="text" name="helperDescInput" id="helper-desc-input">
         
-        <button id="submit-button" onclick="validateAndSubmit()">Submit</button>
+        <button class="button-form" id="submit-button" onclick="validateAndSubmit()">Submit</button>
       </div>
       <div id="helper-container">
         <!-- list guardian -->
@@ -105,6 +117,14 @@
         </div>
       </div>
     </div>
+
+
+    <div class="footer">
+      <p id="about-us">@About Us</p>
+      <p>According to Indonesia's basic health research, the prevalence of mental health disorders in Indonesia has increased from 6% in 2013 to 9.8% in 2018. In the same study, depression among persons older than 15 years old in 2018 was estimated at 6.1%, with only 9% receiving treatment for the condition in Indonesia. There's no single cause of depression. It can occur for a variety of reasons and it has many different triggers. But LONELINESS could be one of them. With this web we hopeing you could be help to people in the right time, because your presence could be crutial in the right time.</p>
+    </div>
+
+
     <script src="script.js"></script>
   </body>
 </html>

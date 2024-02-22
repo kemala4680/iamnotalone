@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I am Not Alone</title>
+    <link rel="stylesheet" href="style.css">    
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <!-- ini buat card user akan memilih untuk menjadi pembantu atau butuh bantuan -->
+        <div></div>
+        <div></div>
+      </div>
+      <div id="user-form">
+        <!-- buat input data butuh bantuan nama dan daerah -->
+        <h2>I Need Someone</h2>
+  
+        <label for="user-name-input" class="user-form-input">Name</label>
+        <input type="text" name="userNameInput" id="user-name-input">
+  
+        <label for="user-area-input" class="user-form-input">Area</label>
+        <input type="text" name="userAreaInput" id="user-area-input">
+  
+        <button id="enter-button" onclick="nearYou()">Enter</button>
+      </div>
+      <div>
+        <!-- menampilkan pembantu di daerah yang sama -->
+        <h2>Near You</h2>
+  
+        <div id="near-you-card">
+  
+        </div>
+      </div>
+      <div id="helper-form">
+        <!-- buat input data pembantu nama, no telp, daerah -->
+        <h2>Helper Form</h2>
+        
+        <label for="helper-name-input" class="helper-form-label">Nama</label>
+        <input type="text" name="helperNameInput" id="helper-name-input">
+  
+        <label for="helper-telp-input" class="helper-form-label">Telp</label>
+        <input type="text" name="helperTelpInput" id="helper-telp-input">
+  
+        <label for="helper-area-input" class="helper-form-label">Area</label>
+        <input type="text" name="helperAreaInput" id="helper-area-input">
+  
+        <button id="submit-button" onclick="addData()">Submit</button>
+      </div>
+      <div id="helper-container">
+        <!-- list guardian -->
+        <h2>List Helper</h2>
+  
+        <div id="helper-card">
+  
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

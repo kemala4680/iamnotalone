@@ -27,12 +27,6 @@ function validateAndSubmit() {
   let helperName = document.getElementById("helper-name-input");
   let helperTelp = document.getElementById("helper-telp-input");
   let helperArea = document.getElementById("helper-area-input");
-  let helperDesc = document.getElementById("helper-desc-input");
-
-  let tag = 1;
-  if (database.length > 0) {
-    tag = database[database.length-1].tag + 1;
-  }
 
   let helperNameError = document.getElementById("helper-name-error");
   let helperTelpError = document.getElementById("helper-telp-error");
@@ -77,6 +71,12 @@ function addData() {
   let helperName = document.getElementById("helper-name-input");
   let helperTelp = document.getElementById("helper-telp-input");
   let helperArea = document.getElementById("helper-area-input");
+  let helperDesc = document.getElementById("helper-desc-input");
+  
+  let tag = 1;
+  if (database.length > 0) {
+    tag = database[database.length-1].tag + 1;
+  }
   
   let tempObj = {
     tag,

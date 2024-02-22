@@ -11,15 +11,31 @@ body {
 
 #user-form h2{
   color: cyan;
+  font-size: 50px;
+  font-family: "Fjalla One", sans-serif;
 }
 
 h2 {
   color: cyan;
+  font-size:50px;
+  font-family: "Fjalla One", sans-serif;
+}
+
+label{
+  font-size: 25px;
+  padding-bottom: 18px; 
 }
 
 #helper-form{
   color: cyan;
 }
+
+#helper-form h2{
+  color: cyan;
+  font-size: 50px;
+  font-family: "Fjalla One", sans-serif;
+}
+
 #helper-container h2{
   color: cyan;
 }
@@ -28,8 +44,54 @@ h2 {
   color: whitesmoke;
 }
 
+#helper-name-input{
+  block-size: 30px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+#helper-telp-input{
+  block-size: 30px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+#helper-area-input{
+  block-size: 30px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+#helper-desc-input{
+  block-size: 30px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
 .user-form-input{
   color: whitesmoke;
+}
+
+#user-name-input{
+  block-size: 30px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+#user-area-input{
+  block-size: 30px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+#enter-button{
+  block-size: 40px;
+  width: 100px;
+}
+
+#submit-button{
+  block-size: 40px;
+  width: 100px;
 }
 
 #near-you-card{
@@ -72,7 +134,7 @@ img{
   display: inline-block;
   align-items: center;
   background-color: #3b3a30;
-  width: 400px;
+  width: 620px;
   padding: 30px 60px;
   border-radius: 20px;
   margin: 40px 0px 400px 0px;
@@ -95,7 +157,7 @@ img{
   display: inline-block;
   align-items: center;
   background-color: #3b3a30;
-  width: 400px;
+  width: 800px;
   padding: 30px 60px;
   border-radius: 20px;
   margin: 40px 0px 400px 0px;

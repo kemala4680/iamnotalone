@@ -2,15 +2,45 @@
 <html>
   <head>
     <title>I am Not Alone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fjalla+One&family=Protest+Strike&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="header.css">
   </head>
   <body>
-    <div class="main">
-      <div>
-        <!-- ini buat card user akan memilih untuk menjadi pembantu atau butuh bantuan -->
-        <div></div>
-        <div></div>
+    <header>
+      <div class="right-section">
+
       </div>
+      <div class="middle-section">
+
+      </div>
+      <div class="left-section">
+
+      </div>
+    </header>
+    <div class="items">
+      <div class="container">
+        <!-- ini buat card user akan memilih untuk menjadi pembantu atau butuh bantuan -->
+        <main class = "grid">
+          <article>
+            <img src="user4.png" width="300px" height="300px">
+            <div class = "konten">
+              <h2>USER</h2>
+            </div>
+          </article>
+          <article>
+            <img src="helper.png" width="300px" height="300px">
+            <div class="konten">
+              <h2>HELPER</h2>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+
+    <div class="main">
       <div id="user-form">
         <!-- buat input data butuh bantuan nama dan daerah -->
         <h2>I Need Someone</h2>
@@ -23,7 +53,7 @@
   
         <button id="enter-button" onclick="nearYou()">Enter</button>
       </div>
-      <div>
+      <div id="helper-list">
         <!-- menampilkan pembantu di daerah yang sama -->
         <h2>Near You</h2>
   
@@ -31,7 +61,11 @@
   
         </div>
       </div>
+    </div>
+
+    <div class="formHelper">
       <div id="helper-form">
+
         <!-- buat input data pembantu nama, no telp, daerah -->
         <h2>Helper Form</h2>
         <label for="helper-name-input" class="helper-form-label">Nama</label>
@@ -45,15 +79,16 @@
         <label for="helper-area-input" class="helper-form-label">Area</label>
         <input type="text" name="helperAreaInput" id="helper-area-input">
         <span id="helper-area-error" style="color: red; display: none;">Area tidak terjangkau</span>
-  
-        <button id="submit-button" onclick="validateAndSubmit()">Submit</button>
+        <label for="helper-desc-input" class="helper-form-label">Description</label>
+        <input type="text" name="helperDescInput" id="helper-desc-input">
+        <button id="submit-button" onclick="addData() validateAndSubmit()">Submit</button>
       </div>
       <div id="helper-container">
         <!-- list guardian -->
         <h2>List Helper</h2>
-  
+
         <div id="helper-card">
-  
+
         </div>
       </div>
     </div>

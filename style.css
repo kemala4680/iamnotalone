@@ -82,10 +82,13 @@ img{
   display: inline-block;
   align-items: center;
   background-color: #3b3a30;
-  width: 400px;
+  width: 800px;
   padding: 30px 60px;
   border-radius: 20px;
   margin: 40px 0px 400px 0px;
+}
+#user-form {
+  margin-left: 200px;
 }
 
 .formHelper {
@@ -102,7 +105,4 @@ label, input {
   display: block;
 }
 
-/* .hidden {
-  display: none;
-} */
 

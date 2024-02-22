@@ -34,17 +34,19 @@
       <div id="helper-form">
         <!-- buat input data pembantu nama, no telp, daerah -->
         <h2>Helper Form</h2>
-        
         <label for="helper-name-input" class="helper-form-label">Nama</label>
         <input type="text" name="helperNameInput" id="helper-name-input">
-  
+        <span id="helper-name-error" style="color: red; display: none;">Nama tidak boleh kosong</span>
+
         <label for="helper-telp-input" class="helper-form-label">Telp</label>
         <input type="text" name="helperTelpInput" id="helper-telp-input">
-  
+        <span id="helper-telp-error" style="color: red; display: none;">Nomor telepon salah</span>
+
         <label for="helper-area-input" class="helper-form-label">Area</label>
         <input type="text" name="helperAreaInput" id="helper-area-input">
+        <span id="helper-area-error" style="color: red; display: none;">Area tidak terjangkau</span>
   
-        <button id="submit-button" onclick="addData()">Submit</button>
+        <button id="submit-button" onclick="validateAndSubmit()">Submit</button>
       </div>
       <div id="helper-container">
         <!-- list guardian -->

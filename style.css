@@ -149,6 +149,9 @@ img{
   border-radius: 20px;
   margin: 40px 0px 400px 0px;
 }
+#user-form {
+  margin-left: 200px;
+}
 
 .formHelper {
   display: inline-block;
@@ -164,7 +167,4 @@ label, input {
   display: block;
 }
 
-/* .hidden {
-  display: none;
-} */
 

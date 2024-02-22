@@ -2,7 +2,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #c0ded9;
+  background-color: gray;
+  background-image: url("download.jpg");
 }
 
 .konten h2{
@@ -126,6 +127,12 @@ img{
   border-top-right-radius: 30px;
 }
 
+.right-section{
+  font-size: 22px;
+  font-family: Permanent Marker;
+  color: cyan;
+}
+
 .grid > article:hover{
   transform: rotate(10deg);
 }
@@ -137,7 +144,14 @@ img{
   width: 620px;
   padding: 30px 60px;
   border-radius: 20px;
-  margin: 40px 0px 400px 0px;
+  margin: 40px 0px 40px 0px;
+}
+
+.words{
+  font-size: 60px;
+  text-align: center;
+  font-family: Protest Strike;
+  
 }
 
 .main {
@@ -147,7 +161,7 @@ img{
   width: 800px;
   padding: 30px 60px;
   border-radius: 20px;
-  margin: 40px 0px 400px 0px;
+  margin: 40px 0px 40px 0px;
 }
 #user-form {
   margin-left: 200px;

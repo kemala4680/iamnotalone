@@ -2,13 +2,96 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: bisque;
+  background-color: #c0ded9;
+}
+
+.konten h2{
+  color: whitesmoke;
+}
+
+#user-form h2{
+  color: cyan;
+}
+
+h2 {
+  color: cyan;
+}
+
+#helper-form{
+  color: cyan;
+}
+#helper-container h2{
+  color: cyan;
+}
+
+.helper-form-label{
+  color: whitesmoke;
+}
+
+.user-form-input{
+  color: whitesmoke;
+}
+
+#near-you-card{
+  color: whitesmoke;
+}
+
+#helper-card{
+  color: whitesmoke;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-right: 300px;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+img{
+  object-fit: cover;
+}
+
+.grid > article{
+  box-shadow: 5px 5px 5px 0px black;
+  border-radius: 20px;
+  text-align: center;
+  background: #b2c2bf;
+  transition: transform;
+}
+.grid > article img{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.grid > article:hover{
+  transform: rotate(10deg);
+}
+
+.items {
+  display: inline-block;
+  align-items: center;
+  background-color: #3b3a30;
+  width: 400px;
+  padding: 30px 60px;
+  border-radius: 20px;
+  margin: 40px 0px 400px 0px;
 }
 
 .main {
   display: inline-block;
   align-items: center;
-  background-color: white;
+  background-color: #3b3a30;
+  width: 400px;
+  padding: 30px 60px;
+  border-radius: 20px;
+  margin: 40px 0px 400px 0px;
+}
+
+.formHelper {
+  display: inline-block;
+  align-items: center;
+  background-color: #3b3a30;
   width: 400px;
   padding: 30px 60px;
   border-radius: 20px;

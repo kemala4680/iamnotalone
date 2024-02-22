@@ -1,24 +1,27 @@
-let database = [
+let database = JSON.parse(localStorage.getItem('database')) || [
   {
     tag: 1,
     name: 'Rimiru Tempest',
     telp: '081292038912',
     area: 'Bekasi',
-    desc: `I’m not a bad Slime`
+    desc: `I’m not a bad Slime`,
+    img: ''
   },
   {
     tag: 2,
     name: 'Alex Bhize',
     telp: '081265455897',
     area: 'Jakarta',
-    desc: 'Gas aja lah Bos-ku'
+    desc: 'Gas aja lah Bos-ku',
+    img:''
   },
   {
     tag: 3,
     name: 'Mikasa Ackerman',
     telp: '082245872563',
     area: 'Depok',
-    desc: 'Ereeennn'
+    desc: 'Ereeennn',
+    img: ''
   }
 ];
 
@@ -72,6 +75,7 @@ function addData() {
   let helperTelp = document.getElementById("helper-telp-input");
   let helperArea = document.getElementById("helper-area-input");
   let helperDesc = document.getElementById("helper-desc-input");
+  let helperImg = document.getElementById("helper-img-input");
   
   let tag = 1;
   if (database.length > 0) {
@@ -83,7 +87,8 @@ function addData() {
     name: helperName.value,
     telp: helperTelp.value,
     area: helperArea.value,
-    desc: helperDesc.value
+    desc: helperDesc.value,
+    img: helperImg
   };
 
   database.push(tempObj);
@@ -92,6 +97,7 @@ function addData() {
   helperTelp.value = '';
   helperArea.value = '';
   helperDesc.value = '';
+  helperImg.value = '';
 
   readData();
 }
@@ -102,19 +108,27 @@ function readData(areaInput) {
   for (let i = 0; i < database.length; i++) {
     let perObj = database[i];
 
-    let {tag, name, area} = perObj;
+    let {tag, name, area, img} = perObj;
 
     if (!areaInput) {
-      template += `<div class="small-card">
-          <p>${name}</p>
-          <p>${area}</p>
+      template += 
+        `<div class="small-card">
+          <img src="${img}">
+          <div>
+            <p>${name}</p>
+            <p>${area}</p>
+          </div>
           <button onclick="showMore(${tag})">-</button>
         </div>`
     } 
     if (areaInput === area) {
-      template += `<div class="small-card">
-          <p>${name}</p>
-          <p>${area}</p>
+      template += 
+        `<div class="small-card">
+          <img src="${img}">
+          <div>
+            <p>${name}</p>
+            <p>${area}</p>
+          </div>
           <button onclick="showMore(${tag},'${area}')">-</button>
         </div>`
     }
@@ -129,6 +143,8 @@ function readData(areaInput) {
 
     nearYouCard.innerHTML = template
   }
+
+  localStorage.setItem('database',JSON.stringify(database));
 }
 
 function nearYou() {
@@ -147,35 +163,51 @@ function showMore(tag,areaInput) {
 
     if (!areaInput) {
       if (perObj.tag === tag) {
-        template += `<div class="big-card">
+        template += `
+          <div class="big-card">
+            <img src="${img}">
+            <div>
               <p>${name}</p>
               <p>${area}</p>
               <p>${telp}</p>
               <p>${desc}</p>
               <button onclick="removeData(${tag})">delete</button>
-              <button onclick="readData()">-</button>
-            </div>`
+            </div>
+            <button onclick="readData()">-</button>
+          </div>`
       } else {
-        template += `<div class="small-card">
-            <p>${name}</p>
-            <p>${area}</p>
+        template += 
+          `<div class="small-card">
+            <img src="${img}">
+            <div>
+              <p>${name}</p>
+              <p>${area}</p>
+            </div>
             <button onclick="showMore(${tag})">-</button>
           </div>`
       }
     }
     if (areaInput === area) {
       if (perObj.tag === tag) {
-        template += `<div class="big-card">
+        template += 
+          `<div class="big-card">
+            <img src="${img}">
+            <div>
               <p>${name}</p>
               <p>${area}</p>
               <p>${telp}</p>
               <p>${desc}</p>
-              <button onclick="nearYou()">-</button>
-            </div>`
+            </div>
+            <button onclick="nearYou()">-</button>
+          </div>`
       } else {
-        template += `<div class="small-card">
-            <p>${name}</p>
-            <p>${area}</p>
+        template += 
+          `<div class="small-card">
+            <img src="${img}">
+            <div>
+              <p>${name}</p>
+              <p>${area}</p>
+            </div>
             <button onclick="showMore(${tag},'${area}')">-</button>
           </div>`
       }

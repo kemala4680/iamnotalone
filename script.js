@@ -1,4 +1,3 @@
-// let database = JSON.parse(localStorage.getItem('database'))
 
 // if (Array.isArray(database) && database.length===0) {
   let database =  [
@@ -75,14 +74,19 @@
       img: 'profile picture/rose.png'
     },
   ];
-// }
+  // }
+  
+  // let a = JSON.parse(localStorage.getItem('database'))
 
-
-function validateAndSubmit() {
-  let helperName = document.getElementById("helper-name-input");
-  let helperTelp = document.getElementById("helper-telp-input");
-  let helperArea = document.getElementById("helper-area-input");
-
+  if (a) {
+    database = a
+  }
+  
+  function validateAndSubmit() {
+    let helperName = document.getElementById("helper-name-input");
+    let helperTelp = document.getElementById("helper-telp-input");
+    let helperArea = document.getElementById("helper-area-input");
+    
   let helperNameError = document.getElementById("helper-name-error");
   let helperTelpError = document.getElementById("helper-telp-error");
   let helperAreaError = document.getElementById("helper-area-error");
@@ -178,7 +182,7 @@ function readData(areaInput) {
           <button onclick="showMore(${tag})">-</button>
         </div>`
     } 
-    if (areaInput === area) {
+    if (areaInput.toLowerCase() === area.toLowerCase()) {
       template += 
         `<div class="card">
           <img class="card-pic" src="${img}">

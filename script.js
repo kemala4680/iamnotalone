@@ -1,7 +1,7 @@
-let database = JSON.parse(localStorage.getItem('database'))
+// let database = JSON.parse(localStorage.getItem('database'))
 
-if (Array.isArray(database) && database.length===0) {
-  database =  [
+// if (Array.isArray(database) && database.length===0) {
+  let database =  [
     {
       tag: 1,
       name: 'Rimiru Tempest',
@@ -75,7 +75,7 @@ if (Array.isArray(database) && database.length===0) {
       img: 'profile picture/rose.png'
     },
   ];
-}
+// }
 
 
 function validateAndSubmit() {
@@ -105,18 +105,17 @@ function validateAndSubmit() {
 
   let area = ['jakarta', 'bogor', 'depok', 'tangerang', 'bekasi'];
   let isValidArea = false;
-    for (let x = 0; x < area.length; x++){
-      let perArea = area[x]
-      if(perArea === helperArea.value.toLowerCase()){
-        isValidArea = true;
-        break;
-      }
-      if (!isValidArea){
-        helperAreaError.style.display = 'block';
-        isValid = false;
-      }
+  for (let x = 0; x < area.length; x++){
+    let perArea = area[x]
+    if(perArea === helperArea.value.toLowerCase()){
+      isValidArea = true;
+      break;
     }
-
+  }
+  if (!isValidArea){
+    helperAreaError.style.display = 'block';
+    isValid = false;
+  }
   if(isValid) {
     addData();
   }
@@ -144,7 +143,7 @@ function addData() {
     telp: helperTelp.value,
     area: helperArea.value,
     desc: helperDesc.value,
-    img: helperImg
+    img: helperImg.value
   };
 
   database.push(tempObj);
